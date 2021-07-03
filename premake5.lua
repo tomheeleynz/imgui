@@ -7,8 +7,8 @@ project "imgui"
 
     files
     {
-        "backends/imgui_impl_opengl3.cpp",
-        "backends/imgui_impl_opengl3.h",
+        "backends/imgui_impl_vulkan.cpp",
+        "backends/imgui_impl_vulkan.h",
         "backends/imgui_impl_glfw.h",
         "backends/imgui_impl_glfw.cpp",
         "imconfig.h",
@@ -28,8 +28,8 @@ project "imgui"
 
     includedirs {
 		"./",
-        "%{IncludeDir.GLFW}",
-        "%{IncludeDir.GLAD}"
+        "%{IncludeDirs.glfw}",
+        "%{IncludeDirs.vulkan}"
 	}
 
 
